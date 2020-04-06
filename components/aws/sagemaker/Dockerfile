@@ -11,11 +11,9 @@
 # limitations under the License.
 
 
-FROM ubuntu:16.04
+FROM amazonlinux:2
 
-RUN apt-get update -y && apt-get install --no-install-recommends -y -q ca-certificates python-dev python-setuptools wget unzip
-
-RUN easy_install pip
+RUN yum update -y && yum install -y -q ca-certificates python-devel python-setuptools python-pip wget unzip
 
 RUN pip install boto3 sagemaker pathlib2 pyyaml==3.12
 

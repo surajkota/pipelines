@@ -139,7 +139,7 @@ outputs:
     description: 'The registry path of the Docker image that contains the training algorithm'
 implementation:
   container:
-    image: redbackthomson/aws-kubeflow-sagemaker:20191003
+    image: surajkota/sagemaker-kfp:04-01-2020
     command: ['python']
     args: [
       hyperparameter_tuning.py,
