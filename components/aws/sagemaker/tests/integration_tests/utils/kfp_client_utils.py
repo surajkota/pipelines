@@ -20,6 +20,7 @@ def compile_and_run_pipeline(
     run = client.run_pipeline(
         experiment_id, pipeline_name, f"{pipeline_path}.yaml", input_params
     )
+    print("run_id: ", run.id)
     return run.id
 
 
